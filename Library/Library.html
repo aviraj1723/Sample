@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <style>
+    .sdbr{
+     height: 100%;
+     width: 80px;
+     position: fixed;
+     overflow-x: hidden;
+     z-index: 1;
+     margin-top: 10vh;
+     background-color: rgb(43, 75, 104);
+     transition: 0.5s;
+    }
+
+
+    .sdbr a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 2s;
+    }
+
+    .sdbr.closed .sideText{
+        display: none;
+    }
+
+    .sdbr.open .sideText{
+        font-size: 30px;
+        display: block;
+    }
+
+    .sdbr .sideIcon{
+        justify-content: center;
+       font-size: 40px ;
+    }
+
+    .sdbr.open{
+        overflow-y: scroll;
+    }
+    
+    .nvbr{
+        height: 10vh;
+        width: 100%;
+        position: fixed;
+        background-color: rgb(220, 225, 228);
+    }
+    
+    .nvbr .opensb {
+        position: absolute;
+        margin-left: 0;
+        height: 10vh;
+        width: 3.5vw;
+        cursor: pointer;
+        color: black;
+        padding: 10px 15px;
+        border: none;
+    }
+
+    .nvbr .closesb {
+        position: absolute;
+        margin-left: 0;
+        height: 10vh;
+        width: 3.5vw;
+        cursor: pointer;
+        color: black;
+        padding: 10px 15px;
+        border: none;
+    }
+    
+    #main {
+        padding:0;
+    }
+
+    ul.brdcmb{
+        position: relative;
+        position: fixed;
+        width: 100%;
+        margin-top: 10vh;
+        padding: 5px 16px;
+        background-color: #eee;
+        margin-left: 80px;
+    }
+
+    ul.brdcmb li {
+        display: inline;
+        font-size: 18px;
+    }
+
+    ul.brdcmb li+li:before {
+        padding: 8px;
+        color: black;
+        content: "|";
+    }
+
+    ul.brdcmb li a {
+        color: #0275d8;
+        text-decoration: none;
+    }
+
+    </style>
+</head>
+<body>
+
+    <div id="sidebr" class="sdbr closed">
+        <a href="#" class="sideIcon"><i>&#8962;</i><span class="sideText">Home</span></a>
+        <a href="#" class="sideIcon"><i>&#8962;</i><span class="sideText">Home</span></a>
+        <a href="#" class="sideIcon"><i>&#8962;</i><span class="sideText">Home</span></a>
+        <a href="#" class="sideIcon"><i>&#8962;</i><span class="sideText">Home</span></a>
+        <a href="#" class="sideIcon"><i>&#8962;</i><span class="sideText">Home</span></a>
+        <a href="#" class="sideIcon"><i>&#8962;</i><span class="sideText">Home</span></a>
+
+        
+    </div>
+
+
+    <div class="nvbr">
+
+        <div id="main">
+            <button id="openSide" class="opensb" onclick="show()">&#9776;</button>
+            <button  id="closeSide" class="closesb" onclick="hide()" style="visibility: collapse;  ">&#x2716;</button>
+        </div>
+    </div>
+
+    <ul id="brdcb" class="brdcmb">
+        <li><a href="#">##</a></li>
+        <li><a href="#">##</a></li>
+        <li><a href="#">##</a></li>
+        <li><a href="#">##</a></li>
+        <li><a href="#">##</a></li>
+    </ul>
+
+    <script>
+        function show() {
+            document.getElementById("sidebr").classList.add("open");
+            document.getElementById("sidebr").classList.remove("closed");
+            document.getElementById("openSide").style.visibility = "collapse";
+            document.getElementById("brdcb").style.visibility = "collapse";
+            document.getElementById("closeSide").style.visibility = "visible";
+            document.getElementById("sidebr").style.width = "200px";
+            document.getElementById("mainsdbr").style.marginLeft = "200px";
+        }
+
+
+        function hide() {
+            document.getElementById("sidebr").classList.remove("open");
+            document.getElementById("sidebr").classList.add("closed");
+            document.getElementById("openSide").style.visibility = "visible";
+            document.getElementById("brdcb").style.visibility = "visible";
+            document.getElementById("closeSide").style.visibility = "collapse";
+            document.getElementById("sidebr").style.width = "80px";
+            document.getElementById("mainsdbr").style.marginLeft = "80px";
+        }
+
+
+    </script>
+</body>
+</html>

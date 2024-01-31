@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="flex.css"> -->
+    <style>
+        .colBg{
+            background-color: red;
+        }
+        .row{
+            display: flex;
+            justify-content: space-between;
+        }
+        .col-12{
+            display: flex;
+        }
+        .w-100{
+            width:100%;
+        }
+        .w-50{
+            width:50%;
+        }
+        .w-33{
+            width: 33.33%;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div><class class="flexbox">
+        <div style="flex-grow: 10;"></div>
+        <div style="flex-grow: 5;"></div>
+        <div style="flex-grow: 5;"></div>
+        <div style="flex-grow: 3;"></div>
+        <div style="flex-grow: 3;"></div>
+        <div style="flex-grow: 3;"></div>
+    </class>
+    </div> -->
+
+    <div class="mainWrapper">
+        <div class="row">
+            <div class="col-12 w-100 colBg">row1 col1</div>
+        </div>
+        <div class="row">
+            <div class="col-12 w-50 colBg">row2 col1</div>
+            <div class="col-12 w-50 colBg">row2 col2</div>
+        </div>
+        <div class="row">
+            <div class="col-12 w-33 colBg">row3 col1</div>
+            <div class="col-12 w-33 colBg">row3 col2</div>
+            <div class="col-12 colBg w-33">row3 col3</div>
+        </div>
+        
+    </div>
+</body>
+</html>
+<!-- style="flex-grow: 2; -->

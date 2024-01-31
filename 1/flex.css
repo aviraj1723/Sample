@@ -1,0 +1,10 @@
+.flexbox{
+    display: flex;
+    background-color: black;
+    align-items: stretch;
+}
+.flexbox > div{
+    background-color: white;
+    margin: 5px;
+    padding: 20px;
+}

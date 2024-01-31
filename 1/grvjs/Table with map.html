@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+table, tr, td {
+    width: 100%;
+    height: 100%;
+    background-color: aqua;
+  border:1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+}
+    </style>
+</head>
+<body>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Email</th>
+            <th>Gender</th>
+            <th>Phone Number</th>
+        </tr>
+    </thead>
+    <tbody id="tbody">
+
+    </tbody> 
+    <!-- <tfoot>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Email</th>
+            <th>Gender</th>
+            <th>Phone Number</th>
+        </tr>
+    </tfoot> -->
+    
+</table>
+
+<img src="" alt="">
+
+<script>
+    let arr = [
+    {name: "gaurav Kumar", age: 20, email: "abc@gmail.com", gender: true, phone: [123,987] },
+    {name: "abc", age: 26, email: "abc@gmail.com", gender: true, phone: [123,987] },
+    {name: "xyz", age: 43, email: "abc@gmail.com", gender: true, phone: [123,987] },
+    {name: "uv", age: 79, email: "abc@gmail.com", gender: false, phone: [123,987] },
+    {name: "mn", age: 34, email: "abc@gmail.com", gender: true, phone: [123,987] }
+    ]
+    // document.getElementById("data").innerHTML = arr.map(arr);
+    // x.innerHTML = name.map(objList)=>{
+    //     return name; var x = <td id="data"></td>
+    // <td id="data"></td>
+    // <td id="data"></td>
+    // // <td id="data"></td> 
+    //  };
+
+    var tableHTML = "";
+    tableHTML += 
+    .for(let i=0; i<arr.length; i++)
+    {
+        tableHTML += arr[i] ;
+    }
+   
+    // arr.map((value, index)=>{
+    //     return tableHTML += `<tr>
+    //         <td>${value.name}</td>
+    //         <td>${value['age']}</td>
+    //         <td>${value.email}</td>
+    //         <td>${value.gender === true ? "Male" : "Female"}</td>
+    //         <td>${value.phone}</td>
+    //         </tr>`;
+    // })
+
+    document.getElementById("tbody").innerHTML = tableHTML
+    </script>
+</body>
+</html>

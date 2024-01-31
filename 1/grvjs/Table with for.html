@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table id="test">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Email</th>
+                <th>Gender</th>
+                <th>Phone Number</th>    
+            </tr>
+        </thead>
+        <tbody id="tbdy">
+
+        </tbody>     
+<script>
+    let arr = [
+    {name: "gaurav Kumar", age: 20, email: "abc@gmail.com", gender: true, phone: [123,987] },
+    {name: "abc", age: 26, email: "abc@gmail.com", gender: true, phone: [123,987] },
+    {name: "xyz", age: 43, email: "abc@gmail.com", gender: true, phone: [123,987] },
+    {name: "uv", age: 79, email: "abc@gmail.com", gender: false, phone: [123,987] },
+    {name: "mn", age: 34, email: "abc@gmail.com", gender: true, phone: [123,987] }
+    ]
+
+    let tempTable = '';
+   
+    for(var i=0; i<arr.length; i++){
+        console.log('hi');
+        tempTable += `<tr>
+            <td>${arr[i]['name']}</td>
+            <td>${arr[i]['age']}</td>
+            <td>${arr[i]['email']}</td>
+            <td>${arr[i]['gender'] == true ? 'Male' : 'Female'}</td>
+            <td>${arr[i]['phone']}</td>
+            </tr>`
+    }
+    document.getElementById("tbdy").innerHTML = tempTable;
+</script>       
+</body>
+</html>

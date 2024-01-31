@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Object</h1>
+    <form id="obj">Name:<input type="name" placeholder="Enter your name" /><br>Age:<input type="age"
+            placeholder="Enter your age" /><br>Email:<input type="email"
+            placeholder="Enter your email" /><br>Gender:<input type="gender" placeholder="Enter your Gender" /><br>Phone
+        Number:<input type="phnmbr" placeholder="Enter your phone number" /></p><input type="submit"
+            value="Submit" onclick="myFunction()"/></form>
+            <p id="show"></p>
+    <script>
+        function myFunction() {
+            document.getElementById("show").innerHTML = "Name:" + obj.name + "Age:" + obj.age + "Email:" + obj.email + "Gender:" + obj.gender + "Phone Number" + obj.phnmbr;
+        }
+
+        let arr = [1,2,3,9,7,0];
+
+        arr.map((v,i,arrrrr)=>{
+            return console.log(v)
+        })
+
+
+
+    </script>
+</body>
+
+</html>
+<!-- form="Details" onsubmit="submit_form()" 
+const person = new object();
+        person.name = "";
+        person.age = "";
+        person.email = "";
+        person.gender = "";
+        person.phnmbr = "";-->

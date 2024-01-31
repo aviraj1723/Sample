@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button with event listener</title>
+</head>
+<body>
+    <h1>Click the button to see the change</h1>
+    <button id="mybtn">Click here!</button>
+    <p id="demo">Hello World</p>
+    <note>
+        <date>2015-09-01</date>
+        <hour>08:30</hour>
+        <to>Tove</to>
+        <from>Jani</from>
+        <body>Don't forget me this weekend!</body>
+      </note>
+    <script>
+        const element = document.getElementById("mybtn");
+        element.addEventListener("click", function() {
+            document.getElementById("demo").style.backgroundColor ="Red";
+        });
+    </script>
+</body>
+</html>

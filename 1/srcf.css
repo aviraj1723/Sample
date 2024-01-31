@@ -1,0 +1,26 @@
+.container{
+    background-color: yellow;
+    display: grid;
+    height: 210px;
+    width: 360px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+.item{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 1/ span 1;
+    background-color: aqua;
+    border-radius: 5px;
+    height: 70px;
+}
+.item1{
+    justify-self: center;
+    background-color: brown;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    height: 35px;
+    width: 60px;
+}
